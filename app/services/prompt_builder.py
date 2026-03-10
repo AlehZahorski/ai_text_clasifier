@@ -15,3 +15,18 @@ Return ONLY a valid JSON object in this format:
 Message:
 "{text}"
 """
+
+
+
+def build_summary_prompt(text: str):
+    return f"""
+Summarize the message in 1-2 sentences.
+
+Return JSON:
+{{
+ "summary": "..."
+}}
+
+Message:
+{text}
+"""
